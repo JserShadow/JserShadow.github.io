@@ -144,20 +144,59 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1527073182134&amp;di=21c2cb76f05a5612a5831394b1ed9201&amp;imgtype=0&amp;src=http%3A%2F%2Fwscont2.apps.microsoft.com%2Fwinstore%2F1x%2Fea9a3c59-bb26-4086-b823-4a4869ffd9f2%2FScreenshot.398115.100000.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3436700634,3978310514&amp;fm=27&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >JS基础(一):在HTML中使用JS</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="使用-lt-script-gt-标签"><a href="#使用-lt-script-gt-标签" class="headerlink" title="使用&lt;script&gt;标签"></a>使用&lt;script&gt;标签</h1><ul>
+<li>&lt;script&gt;的属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th style="text-align:center">是否必选</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>async</td>
+<td style="text-align:center">否</td>
+<td style="text-align:left">表示需要立即下载脚本，但不妨碍页面中其他操作（异步下载）</td>
+</tr>
+<tr>
+<td>defer</td>
+<td style="text-align:center">否</td>
+<td style="text-align:left">表示脚本可延迟到文档被解析后再执行</td>
+</tr>
+<tr>
+<td>src</td>
+<td style="text-align:center">否</td>
+<td style="text-align:left">表示外部脚本的路径</td>
+</tr>
+<tr>
+<td>charset</td>
+<td style="text-align:center">否</td>
+<td style="text-align:left">表示通过src指定的代码的字符集</td>
+</tr>
+<tr>
+<td>language</td>
+<td style="text-align:center">否（已废弃）</td>
+<td style="text-align:left">表示编写代码使用的语言</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:center">否</td>
+<td style="text-align:left">可以看成language的替代属性，表示MIME类型</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1-async与defer"><a href="#1-async与defer" class="headerlink" title="1.async与defer"></a>1.async与defer</h4><p>先看以下三种引入JS脚本的方式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"example.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"example.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"example.js"</span> <span class="attr">defer</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>使用第一种方式时浏览器读到script标签就会立即开始加载并执行该脚本，同时暂停解析后续HTML文档，直到脚本执行完才会恢复HTML文档解析;<br>使用第二种方式时浏览器会同时进行脚本加载和HTML的解析，但在脚本加载完成的同时会暂停HTML的解析并开始执行脚本，脚本执行结束恢复解析HTML(<code>使用async方式不保证脚本按序执行，所以使用时要注意脚本间不要存在依赖关系</code>);<br>使用第三种方式时浏览器会同时进行HTML的解析和脚本加载，HTML解析完成后才按顺序执行脚本;<br><img src="http://segmentfault.com/img/bVcQV0"><br>上面是在三种引入方式下的时序图，其中三种颜色分别代表：<font color="green">解析HTML</font> <font color="blue">加载脚本</font> <font color="red">执行脚本</font></p>
+<h4 id="2-src属性"><a href="#2-src属性" class="headerlink" title="2.src属性"></a>2.src属性</h4><p>src属性表示脚本的路径，可以填成绝对路径(如：<code>src=&quot;https://cdn.bootcss.com/jquery/3.3.1/core.js&quot;</code>)，也可以填成相对路径(如：<code>src=&quot;../js/example.js&quot;</code>)，根据具体情况使用即可;</p>
+<h4 id="3-type属性"><a href="#3-type属性" class="headerlink" title="3.type属性"></a>3.type属性</h4><p>type属性表示脚本的MIME(内容类型)，默认为<code>text/javascript</code>而实际在服务器传送JavaScript脚本时MIME类型为<code>application/x-javascript</code>，在非IE浏览器中还可以使用<code>application/javascript</code>和<code>application/ecmascript</code>。一般情况下使用默认值即可;</p>
 
             </div>
 
@@ -220,8 +259,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://blogs.pipi0127.top/2018/04/23/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://blogs.pipi0127.top/2018/04/23/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://blogs.pipi0127.top/2018/05/23/JS基础-一-在HTML中使用JS/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blogs.pipi0127.top/2018/05/23/JS基础-一-在HTML中使用JS/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
