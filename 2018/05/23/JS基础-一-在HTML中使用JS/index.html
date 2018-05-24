@@ -197,7 +197,8 @@
 <p>使用第一种方式时浏览器读到script标签就会立即开始加载并执行该脚本，同时暂停解析后续HTML文档，直到脚本执行完才会恢复HTML文档解析;<br>使用第二种方式时浏览器会同时进行脚本加载和HTML的解析，但在脚本加载完成的同时会暂停HTML的解析并开始执行脚本，脚本执行结束恢复解析HTML(<code>使用async方式不保证脚本按序执行，所以使用时要注意脚本间不要存在依赖关系</code>);<br>使用第三种方式时浏览器会同时进行HTML的解析和脚本加载，HTML解析完成后才按顺序执行脚本;<br><img src="http://segmentfault.com/img/bVcQV0"><br>上面是在三种引入方式下的时序图，其中三种颜色分别代表：<font color="green">解析HTML</font> <font color="blue">加载脚本</font> <font color="red">执行脚本</font></p>
 <h4 id="2-src属性"><a href="#2-src属性" class="headerlink" title="2.src属性"></a>2.src属性</h4><p>src属性表示脚本的路径，可以填成绝对路径(如：<code>src=&quot;https://cdn.bootcss.com/jquery/3.3.1/core.js&quot;</code>)，也可以填成相对路径(如：<code>src=&quot;../js/example.js&quot;</code>)，根据具体情况使用即可;</p>
 <h4 id="3-type属性"><a href="#3-type属性" class="headerlink" title="3.type属性"></a>3.type属性</h4><p>type属性表示脚本的MIME(内容类型)，默认为<code>text/javascript</code>而实际在服务器传送JavaScript脚本时MIME类型为<code>application/x-javascript</code>，在非IE浏览器中还可以使用<code>application/javascript</code>和<code>application/ecmascript</code>。一般情况下使用默认值即可;</p>
-
+<h1 id="lt-script-gt-放置位置"><a href="#lt-script-gt-放置位置" class="headerlink" title="&lt;script&gt;放置位置"></a>&lt;script&gt;放置位置</h1><p>传统的做法把引入的css文件和脚本文件放置在<code>&lt;head&gt;&lt;/head&gt;</code>中，但这种做法会导致必须下载完所有脚本后才能解析dom，所以最好把所有的script标签都放在<code>&lt;body&gt;&lt;/body&gt;</code>的最后;<br>由于不同浏览器对于defer属性支持不同，因此哪怕是defer脚本也最好放在<code>&lt;body&gt;&lt;/body&gt;</code>的最后;</p>
+<h1 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h1><h4 id="混杂模式与标准模式"><a href="#混杂模式与标准模式" class="headerlink" title="混杂模式与标准模式"></a>混杂模式与标准模式</h4>
             </div>
 
             <!-- Post Comments -->
