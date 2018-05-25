@@ -144,20 +144,55 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1527073182134&amp;di=21c2cb76f05a5612a5831394b1ed9201&amp;imgtype=0&amp;src=http%3A%2F%2Fwscont2.apps.microsoft.com%2Fwinstore%2F1x%2Fea9a3c59-bb26-4086-b823-4a4869ffd9f2%2FScreenshot.398115.100000.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://www.developerspost.com/wp-content/uploads/2017/11/doctype-html.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >HTML基础(一):文档模式</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h1><p>DOCTYPE (Document Type Declaration - 文档类型声明)<br>通常位于一个HTML文档的开头，在HTML5中通常写成<code>&lt;!DOCTYPE html&gt;</code>用于在文档解析一开始就让浏览器知道该文档用的文档模式</p>
+<h1 id="现有的文档模式"><a href="#现有的文档模式" class="headerlink" title="现有的文档模式"></a>现有的文档模式</h1><p>在最初各大浏览器厂商定制规则时，定制了两种模式: <code>标准模式</code> 和 <code>混杂模式</code><br><code>标准模式</code>是为了解决web开发时各大浏览器间兼容的问题制定的标准,遵循<font color="#ff3333">W3C标准</font>(IE6开始使用,也叫严格模式)<br><code>混杂模式</code>是为了保持以前开发的web项目依然可以兼容而制定的标准,遵循浏览器自身的标准(也称为<code>怪异模式</code>)</p>
+<p>后来IE又提出了一种模式叫<code>准标准模式</code>,与标准模式几乎没有区别，只有在处理图片间隙的时候会有一定区别</p>
+<h1 id="各种类型DOCTYPE的写法"><a href="#各种类型DOCTYPE的写法" class="headerlink" title="各种类型DOCTYPE的写法"></a>各种类型DOCTYPE的写法</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML5 --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- HTML4.01 严格型 --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- HTML4.01 过渡型 --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- HTML4.01 框架集型 --&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p>后面两种<code>过渡型</code>和<code>框架集型</code>即为准标准模式的触发方式<br>想触发混杂模式,只要不写DOCTYPE或者写错就行</p>
+<p><font color="#ff3333">特殊情况</font><br>如果在写代码时在DOCTYPE声明之前添加了以下内容: 普通文本、HTML 标签、HTML 注释、XML 声明、IE条件注释,<br>其中如果是普通文本或HTML标签,所有浏览器都会进入混杂模式,<br>而如果是HTML注释或XML声明，在非IE浏览器中会被忽略，而在IE中，如果是HTML注释则所有IE浏览器都会进入混杂模式，而xml只有在IE6会进入混杂模式，<br>IE条件注释：这个是唯一在所有浏览器中都不会进入混杂模式的方法，所以要是非得在HTML前面写点啥，一定要写在以下标签中<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">![if</span> !<span class="attr">IE</span>]&gt;</span><span class="tag">&lt;<span class="name">![endif]</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">![if</span> <span class="attr">false</span>]&gt;</span><span class="tag">&lt;<span class="name">![endif]</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="检测文档模式"><a href="#检测文档模式" class="headerlink" title="检测文档模式"></a>检测文档模式</h1><p>想要知道文档用了哪种模式可以通过<code>document.compatMode</code>的返回值来判断</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">名称</th>
+<th style="text-align:left">英文名称</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">标准模式</td>
+<td style="text-align:left">standards mode/strict mode</td>
+<td style="text-align:left">CSS1Compat</td>
+</tr>
+<tr>
+<td style="text-align:left">准标准模式</td>
+<td style="text-align:left">almost standards mode</td>
+<td style="text-align:left">CSS1Compat</td>
+</tr>
+<tr>
+<td style="text-align:left">怪异模式</td>
+<td style="text-align:left">quirks mode</td>
+<td style="text-align:left">BackCompat</td>
+</tr>
+</tbody>
+</table>
+<h1 id="标准模式和混杂模式的区别"><a href="#标准模式和混杂模式的区别" class="headerlink" title="标准模式和混杂模式的区别"></a>标准模式和混杂模式的区别</h1><h4 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h4><p>标准模式下的盒模型宽度<code>width</code>为<code>content</code>的宽度<br>混杂模式下的盒模型宽度<code>width</code>为<code>border + padding + content</code></p>
+<blockquote>
+<p>在标准模式下使用<code>box-sizing: border-box</code>会使盒模型计算方式和混杂模式一样</p>
+</blockquote>
+<h4 id="行内元素的对齐方式"><a href="#行内元素的对齐方式" class="headerlink" title="行内元素的对齐方式"></a>行内元素的对齐方式</h4><p>标准模式下对齐至基线<br>混杂模式下对齐至底部</p>
+<h4 id="important声明"><a href="#important声明" class="headerlink" title="!important声明"></a>!important声明</h4><p>混杂模式下，IE6/7/8都不认!important声明</p>
+<h4 id="行内元素宽高"><a href="#行内元素宽高" class="headerlink" title="行内元素宽高"></a>行内元素宽高</h4><p>标准模式下行内元素直接设置width和height都不会生效<br>混杂模式下直接生效</p>
+<blockquote>
+<p>标准模式下需要设置<code>display: inline-block</code>才可以设置宽高</p>
+</blockquote>
+<h4 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h4><p>标准模式下使用<code>margin: 0 auto</code>会使元素水平居中<br>混杂模式失效</p>
 
             </div>
 
@@ -220,8 +255,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://blogs.pipi0127.top/2018/04/23/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://blogs.pipi0127.top/2018/04/23/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://blogs.pipi0127.top/2018/05/25/HTML基础-一-文档模式/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blogs.pipi0127.top/2018/05/25/HTML基础-一-文档模式/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
