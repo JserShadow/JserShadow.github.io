@@ -68,12 +68,18 @@
 		
 <!-- Layouts -->
 
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
-<link rel="stylesheet" href="/css/typo.css" />
-<!-- 文章页 -->
+    <!-- Tags Cloud -->
+    
+<link rel="stylesheet" href="/css/item.css" />
+<style >
+    .row a{
+        border-bottom: none;
+    }
+    .special{
+        padding: 0;
+        padding: 2rem;
+    }
+</style>
 <body class="is-loading">
     <!-- Wrapper 外包 s-->
     <div id="wrapper" class="fade-in">
@@ -150,103 +156,31 @@
 		            
 			</ul>
 </nav>
-
-        <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://4.bp.blogspot.com/-QPkAcNH1NUQ/WRfc27-qWFI/AAAAAAAAy6g/74NNXOZ4pywIMCBbExG566EhxupnNDDrACLcB/s1600/vue-newsletter.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Vue.js 常见知识点</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                
-            </div>
-
-            <!-- Post Comments -->
-            
-    <!-- 使用 DISQUS_CLICK -->
-<div id="disqus-comment">
-    <div id="disqus_thread"></div>
-
-<!-- add animation -->
-<style>
-	.disqus_click_btn {
-            line-height: 30px;
-            margin: 0;
-            min-width: 50px;
-            padding: 0 14px;
-            display: inline-block;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            overflow: hidden;
-            will-change: box-shadow;
-            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
-            outline: 0;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            vertical-align: middle;
-            border: 0;
-            background: rgba(158, 158, 158, .2);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-            color: #fff;
-            background-color: #7EC0EE;
-            text-shadow: 0
-        }
-</style>
-	
-<div class="btn_click_load" id="disqus_bt"> 
-    <button class="disqus_click_btn">点击查看评论</button>
-</div>
-
-<!--
-<script type="text/javascript">
-$('.btn_click_load').click(function() {
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-
-    document.getElementById('disqus_bt').style.display = "none";
-});
-</script>
--->
-<script type="text/javascript">
-    var disqus_config = function () {
-        this.page.url = 'http://blogs.pipi0127.top/2018/05/06/Vue-js-常见知识点/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://blogs.pipi0127.top/2018/05/06/Vue-js-常见知识点/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-</script>
-
-<script type="text/javascript">
-    $('.btn_click_load').click(function() {  //click to load comments
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document;
-            var s = d.createElement('script');
-            s.src = '//http-miccall-tech.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-        $('.btn_click_load').css('display','none');
-    });
-</script>
-</div>
-<style>
-    #disqus-comment{
-        background-color: #eee;
-        padding: 2pc;
-    }
-</style>
-
-
+                <div id="main">
+            <!-- Main first s-->
+            <article id="me" class="panel">
+                <header style="color: #000000">
+                    <h1>Shadow</h1>
+                    <p>To Be A Full Stack Engineer</p>
+                </header>
+                <a href="" class="jumplink pic">
+                    <span class="arrow icon fa-chevron-right"><span></span></span>
+                    <img src="/img/hack.jpg" alt="" />
+                </a>
+            </article>
+            <!-- Main first e-->
         </div>
-        Copyright 版权 start
+
+        <section class="special">
+                            <div class="row" style="border-bottom: none;">
+
+        <a href="/tags/Github/" style="font-size: 16px;">Github</a> <a href="/tags/HEXO/" style="font-size: 16px;">HEXO</a> <a href="/tags/HTML/" style="font-size: 16.5px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a> <a href="/tags/JavaScript/" style="font-size: 17px;">JavaScript</a> <a href="/tags/Vue/" style="font-size: 16px;">Vue</a>
+
+                            </div>
+                    
+        </section>
+
+        <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
                 <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
@@ -258,7 +192,6 @@ $('.btn_click_load').click(function() {
         </div>
     </div>
 </body>
-
 
 
  	
