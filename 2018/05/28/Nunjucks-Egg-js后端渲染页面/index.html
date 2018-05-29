@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    My Blog
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="Coder Shadow" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/back.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Shadow</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/05/">May 2018</a></li><li><a class="archive-link" href="/archives/2018/04/">April 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/JserShadow" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://cdn.css-tricks.com/wp-content/uploads/2017/05/nunjucks.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Nunjucks + Egg.js后端渲染页面</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p>&nbsp;&nbsp; 最近开发的项目有一个需求，需要能够打印填写过后的最终成绩单，考虑过三种方案：到前端用vue画一个页面打印，导出成Word/PDF或者后台输出HTML，显然最后一种是最方便的。</p>
+<p>于是乎去翻了Egg的文档，有一个插件叫<code>egg-view-nunjucks</code>，是基于Egg自带的<code>egg-view</code>和后端渲染引擎<code>Nunjucks</code>的后端渲染插件</p>
+<h1 id="egg-view"><a href="#egg-view" class="headerlink" title="egg-view"></a>egg-view</h1><p>=&gt; <a href="https://eggjs.org/zh-cn/core/view.html" target="_blank" rel="noopener">egg-view 文档</a><br>egg-view是Egg.js内置的模板解决方案，开发者可以利用egg-view开发模板插件也可以用它和已有模板插件配合使用。</p>
+<h1 id="Nunjucks"><a href="#Nunjucks" class="headerlink" title="Nunjucks"></a>Nunjucks</h1><p><code>Nunjucks</code>是一个后端模板引擎，可以把后端请求的数据渲染到写好的模板上返回html文档。</p>
+<h4 id="Nunjucks-常用语法"><a href="#Nunjucks-常用语法" class="headerlink" title="Nunjucks 常用语法"></a>Nunjucks 常用语法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件扩展名: Nunjucks的文件可以用任何扩展名，但是推荐使用`.njk`</span></span><br><span class="line"><span class="comment">//定义一个变量 </span></span><br><span class="line">&#123;&#123; stuName &#125;&#125;</span><br><span class="line">&#123;&#123; student.name &#125;&#125;</span><br><span class="line">&#123;&#123; student[<span class="number">0</span>].name &#125;&#125;</span><br><span class="line"><span class="comment">// 以上写法都是支持的，但是注意它不像Vue在渲染数据时大括号里可以接受复杂的表达式，需要把数据处理好再渲染</span></span><br><span class="line"><span class="comment">// 如果需要通过执行函数显示正确的变量，可以使用过滤器:</span></span><br><span class="line">&#123;&#123; foo | replace(<span class="string">'foo'</span>, <span class="string">'bar'</span>) | capitalize &#125;&#125;</span><br><span class="line"><span class="comment">// 上面的表达式最终将渲染成'Bar',后面的capitalize表示首字母大写</span></span><br><span class="line"><span class="comment">// 模板可以用以下两种方式进行拆分</span></span><br><span class="line"><span class="comment">// 继承</span></span><br><span class="line">&#123;% extends <span class="string">'father path'</span> %&#125;</span><br><span class="line"><span class="comment">// include</span></span><br><span class="line">&#123;% include <span class="string">'child path'</span> %&#125;</span><br><span class="line"><span class="comment">// 以上两种方式需要利用区块 block 来实现</span></span><br><span class="line">&#123;% block blockname %&#125;</span><br><span class="line">  something</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"><span class="comment">// 通过继承可以将子模板的相同区块名的内容覆盖到父模板上</span></span><br><span class="line"><span class="comment">// super</span></span><br><span class="line">&#123;&#123; <span class="keyword">super</span>() &#125;&#125;</span><br><span class="line"><span class="comment">// super方法可以在继承时渲染父模板的内容</span></span><br><span class="line"><span class="comment">//father.njk</span></span><br><span class="line">&#123;% block a %&#125;</span><br><span class="line">  &lt;div&gt;这是父模板&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&#123;% endblock %&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ child.njk</span></span><br><span class="line"><span class="regexp">&#123;% extends father.njk %&#125;</span></span><br><span class="line"><span class="regexp">&#123;% block a %&#125;</span></span><br><span class="line"><span class="regexp">  &#123;&#123; super() &#125;&#125;</span></span><br><span class="line"><span class="regexp">  &lt;div&gt;这是子模板&lt;/</span>div&gt;</span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"><span class="comment">// 渲染结果</span></span><br><span class="line">&lt;div&gt;这是父模板&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;div&gt;这是子模板&lt;/</span>div&gt;</span><br><span class="line"><span class="comment">// Nunjucks还支持 if for 等语句，就不一一列举了</span></span><br></pre></td></tr></table></figure>
+<p>=&gt; <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener">Nunjucks文档</a></p>
+<h1 id="egg-view-nunjucks"><a href="#egg-view-nunjucks" class="headerlink" title="egg-view-nunjucks"></a>egg-view-nunjucks</h1><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config/plugin.js</span></span><br><span class="line">exports.nunjucks = &#123;</span><br><span class="line">  enable: <span class="literal">true</span>,</span><br><span class="line">  package: <span class="string">'egg-view-nunjucks'</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// config/config.default.js</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">appInfo</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> config = &#123;&#125;;</span><br><span class="line">  config.view = &#123;</span><br><span class="line">    root: [</span><br><span class="line">      path.join(appInfo.baseDir, <span class="string">'app/view'</span>),</span><br><span class="line">      path.join(appInfo.baseDir, <span class="string">'path/to/another'</span>),</span><br><span class="line">    ].join(<span class="string">','</span>)</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> config;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面的配置规则中<code>config.view</code>为egg-view的默认配置，root是view目录的位置,可以写多个目录位置</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://blogs.pipi0127.top/2018/05/28/Nunjucks-Egg-js后端渲染页面/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://blogs.pipi0127.top/2018/05/28/Nunjucks-Egg-js后端渲染页面/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        Copyright 版权 start
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
